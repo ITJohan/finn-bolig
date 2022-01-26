@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" type="module"></script>
+  <title>FINN Bolig</title>
+</head>
+
+<body>
+  <main>
+    <!-- Control panel -->
+    <section class="container">
+      <input id="search" type="text">
+      <button id="search-btn">Søk</button>
+      <div id="terminal" class="terminal">
+        <p>Found 3 ads...</p>
+        <p>Fetching ad 1...</p>
+        <p>Fetching ad 2...</p>
+        <p>Fetching ad 3...</p>
+        <p>Generating data...</p>
+        <p>Adding points to map...</p>
+      </div>
+      <h3 id="new">Nye</h3>
+      <div>
+        <p>Gamle Riksvei 1, 3057 Solbergelva</p>
+        <button>Spare</button>
+        <button>FINN</button>
+        <button>Kart</button>
+      </div>
+      <div>
+        <p>Nordlivegen 8 B, 7053 Ranheim</p>
+        <button>Spare</button>
+        <button>FINN</button>
+        <button>Kart</button>
+      </div>
+      <h3 id="saved">Sparade</h3>
+      <div>
+        <p>Borggata 32, 5411 Stord</p>
+        <button>Ta bort</button>
+        <button>FINN</button>
+        <button>Kart</button>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="container">
+      <iframe width="600" height="400" id="map"
+        src="https://maps.google.com/maps?q=Gamle%20Riksvei%201,%203057%20Solbergelva&t=&z=11&ie=UTF8&iwloc=&output=embed"
+        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+      </iframe>
+    </section>
+  </main>
+</body>
+
+</html>
