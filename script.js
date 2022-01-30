@@ -8,22 +8,18 @@ searchForm.addEventListener('submit', async (e) => {
 
   const data = await fetchApartmentData(url);
 
-  console.log(data);
-
   data.forEach((apartment) => {
     const apartmentEl = apartmentTemplate.content.cloneNode(true);
     const p = apartmentEl.querySelector('p');
     p.textContent = apartment.address;
 
     const btn = apartmentEl.querySelector('.kart-btn');
-    console.log(btn);
     btn.addEventListener('click', (e) => {
       const map = document.getElementById('map');
-      const src = `https://maps.google.com/maps?q=${apartment.url.replace(
+      const src = `https://maps.google.com/maps?q=${apartment.address.replace(
         ' ',
         '%20'
-      )}&t=&z=11&ie=UTF8&iwloc=&output=embed`;
-      console.log(src);
+      )}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
       map.src = src;
     });
 
@@ -75,8 +71,6 @@ const fetchAdress = async (url) => {
     const address = html.querySelector(
       '#realestateClassifiedContainer > div:nth-child(2) > div > div.grid__unit.u-r-size2of3 > div > section:nth-child(2) > p'
     );
-
-    console.log(address);
   } catch (e) {
     console.error(e.message);
   }
